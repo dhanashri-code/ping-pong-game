@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #5c5d5f;
+    font-family: cursive;
+    color: whitesmoke;
+}
+canvas {
+    display: block;
+    margin:auto;
+    background-color: black;
+}
+div{
+    display: flex;
+    justify-content: space-evenly;
+    margin:auto;
+    width: 900px;
+}
+h2{
+    font-family:cursive;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 450px;
+    margin:auto; 
+    background: black;
+    
+}
+button {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+button:hover {
+    background-color: darkred;
+}
+
+.container{
+    width: 100%;
+    min-height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    font-weight: 600;
+    font-size: 35px;
+    font-family: cursive;
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 300%;
+    animation: move 5s ease infinite;
+    background-image: linear-gradient( 68.7deg,  rgba(29,173,235,1) 13.2%, rgba(137,149,250,1) 29.8%, rgba(229,109,212,1) 48.9%, rgba(255,68,128,1) 68.2%, rgba(255,94,0,1) 86.4% );
+}
+
+@keyframes move {
+    0%,100%{
+        background-position: 200% 0%;
+    }
+
+    50%{
+        background-position: 0% 200%;
+    }
+}
+
+#instruction-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 10;
+}
+#instruction-window h1 {
+    font-size: 46px;
+    color: rgb(85, 213, 166);
+}
+#instruction-window p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 20px 0;
+}
+#close-btn {
+    position: absolute;
+    top: 40px;
+    right: 90px;
+    font-size: 50px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+#close-btn:hover {
+    color: rgb(224, 80, 80);
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ping pong game</title>
+    <link href="index1.css" rel="stylesheet" >
+</head>
+<body>
+    <div id="instruction-window">
+        <button id="close-btn">X</button>
+        <h1>Welcome to Ping Pong Game!</h1>
+        <p>
+            - You can edit your name with click on user.<br>
+            - Use your mouse to control the paddle.<br>
+            - Score 10 points to win.<br>
+            - Prevent the ball from crossing your paddle.<br>
+            - Good luck and have fun!
+        </p>
+    </div>
+    <div class="container">
+        <div class="text">ping pong game</div>
+    </div>
+
+    <div>
+    <h2 contenteditable="true">&nbsp;&nbsp; User </h2>
+    <h2> &nbsp;&nbsp;&nbsp;AI </h2>
+    </div>
+
+    <canvas id="table" width="900" height="400"></canvas>
+    <button id="restart-btn" style="display: none;">Restart Game</button>
+
+    <script src="index2.js"></script>
+</body>
+</html>
