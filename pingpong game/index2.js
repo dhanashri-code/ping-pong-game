@@ -160,7 +160,7 @@ function updateBall() {
     if (user.score === 10) {
         isGameOver = true;
         winner = "User Wins!";
-    } else if (cpu.score === 5) {
+    } else if (cpu.score === 10) {
         isGameOver = true;
         winner = "AI Wins!";
     }
