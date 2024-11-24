@@ -10,6 +10,8 @@ canvas {
     display: block;
     margin:auto;
     background-color: black;
+    width:900;
+    height:400;
 }
 div{
     display: flex;
