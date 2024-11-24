@@ -113,10 +113,4 @@ button:hover {
 #close-btn:hover {
     color: rgb(224, 80, 80);
 }
-@media (max-width: 768px) {
-    body{
-        font-size:30px;
-    canvas{
-        height: 700px;
-    }
-}
+
