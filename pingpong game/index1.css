@@ -116,7 +116,6 @@ button:hover {
 @media (max-width: 768px) {
     
     canvas{
-        width:auto;
         height: 1000px;
     }
 }
