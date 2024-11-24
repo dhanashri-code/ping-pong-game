@@ -204,13 +204,9 @@ let looper = setInterval(call_back, 1000 / fps);
 // Paddle control with mouse
 can.addEventListener("mousemove", getMousePos);
 
-/*function getMousePos(evt) {
-    let rect = can.getBoundingClientRect();
-    user.y = evt.clientY - rect.top - user.height / 2;
-}*/
 // Add event listeners for both mouse and touch events
 can.addEventListener("mousemove", getMousePos);
-can.addEventListener("touchmove", getTouchPos);
+can.addEventListener("touchmove", getTouchPos, { passive: false });
 
 function getMousePos(evt) {
     let rect = can.getBoundingClientRect();
@@ -222,11 +218,10 @@ function getTouchPos(evt) {
     evt.preventDefault();
 
     let rect = can.getBoundingClientRect();
-    // Use the first touch point
+    // Smoothly handle the first touch point
     let touch = evt.touches[0];
     user.y = touch.clientY - rect.top - user.height / 2;
 }
-
 // Reset game when restart button is clicked
 restartButton.addEventListener("click", function () {
     user.score = 0;
