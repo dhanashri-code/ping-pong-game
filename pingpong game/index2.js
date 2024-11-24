@@ -179,7 +179,7 @@ function cpuAI() {
     if (cpu.y + cpu.height / 2 < ball.y) {
         cpu.y += 5;
     } else {
-        cpu.y -= 4;
+        cpu.y -= 3;
     }
 }
 
@@ -204,9 +204,27 @@ let looper = setInterval(call_back, 1000 / fps);
 // Paddle control with mouse
 can.addEventListener("mousemove", getMousePos);
 
+/*function getMousePos(evt) {
+    let rect = can.getBoundingClientRect();
+    user.y = evt.clientY - rect.top - user.height / 2;
+}*/
+// Add event listeners for both mouse and touch events
+can.addEventListener("mousemove", getMousePos);
+can.addEventListener("touchmove", getTouchPos);
+
 function getMousePos(evt) {
     let rect = can.getBoundingClientRect();
     user.y = evt.clientY - rect.top - user.height / 2;
+}
+
+function getTouchPos(evt) {
+    // Prevent default touch behavior
+    evt.preventDefault();
+
+    let rect = can.getBoundingClientRect();
+    // Use the first touch point
+    let touch = evt.touches[0];
+    user.y = touch.clientY - rect.top - user.height / 2;
 }
 
 // Reset game when restart button is clicked
