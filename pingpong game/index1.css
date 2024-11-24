@@ -10,8 +10,8 @@ canvas {
     display: block;
     margin:auto;
     background-color: black;
-    width:900;
-    height:400;
+    width:900px;
+    height:400px;
 }
 div{
     display: flex;
@@ -116,7 +116,6 @@ button:hover {
 @media (max-width: 768px) {
     
     canvas{
-        width: 100%;
-        height: auto;
+        height: 700px;
     }
 }
